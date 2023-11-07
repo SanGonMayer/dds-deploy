@@ -9,8 +9,8 @@ orbs:
   docker: circleci/docker@1.5.0
 
 executors:
- docker-publisher: 
-  docker: 
+ docker-publisher:
+  docker:
   - image: circleci/node:latest
     auth:
       username: $DOCKERHUB_USERNAME
@@ -18,9 +18,9 @@ executors:
 
 
 jobs:
-  publishLatestToHub: 
+  publishLatestToHub:
     executor: docker-publisher
-    steps: 
+    steps:
       - checkout
       - setup_remote_docker
       - run:
