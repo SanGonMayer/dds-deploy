@@ -18,7 +18,7 @@ executors:
 
 
 jobs:
-  publishLatestToHub:
+publishLatestToHub:
     executor: docker-publisher
   steps:
       - checkout
